@@ -1,1 +1,28 @@
-<p>room-datails works!</p>
+<p-card>
+  <ng-template pTemplate="title" class="p-card-header">
+    Room Details
+  </ng-template>
+
+  <hr/>
+  <div *ngIf="room">
+    <div>
+      <label><b>Name </b></label> {{room.name}}
+    </div>
+    <div>
+      <label><b> date</b></label> {{room.date}}
+    </div>
+    <div>
+      <label><b> startHour</b></label> {{room.startHour}}
+    </div>
+    <div>
+      <label><b> endHour</b></label> {{room.endHour}}
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <button (click)="list()" class="btn btn-primary">
+    Back to Room List
+  </button>
+  <br>
+</p-card>

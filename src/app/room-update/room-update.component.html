@@ -1,1 +1,44 @@
-<p>room-update works!</p>
+<p-card>
+
+  <ng-template pTemplate="title" class="p-card-header">
+    Update Room
+  </ng-template>
+
+  <div id="form">
+
+    <form (ngSubmit)="onSubmit()">
+
+      <div class="p-fluid formgrid grid">
+        <div class="p-float-label field col">
+          <input id="name" type="text" required pInputText
+            [(ngModel)]="room.name" name="name">
+          <label for="float-input">Name</label>
+        </div>
+        <div class="p-float-label field col">
+          <input id="date" type="text" required pInputText
+            [(ngModel)]="room.date" name="date">
+          <label for="float-input">Date</label>
+        </div>
+
+        <div class="p-float-label field col">
+          <input id="startHours" type="text" required pInputText
+            [(ngModel)]="room.startHour" name="startHour">
+          <label for="float-input">Start Hour</label>
+        </div>
+
+        <div class="p-float-label field col">
+          <input id="startHours" type="text" required pInputText
+            [(ngModel)]="room.endHour" name="endHour">
+          <label for="float-input">End Hour</label>
+        </div>
+      </div>
+
+      <div class="grid">
+        <button pButton type="submit" class="p-button-primary"
+          style="margin-left: 10px">Submit</button>
+      </div>
+
+    </form>
+  </div>
+
+</p-card>

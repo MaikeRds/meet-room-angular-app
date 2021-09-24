@@ -1,1 +1,74 @@
-<p>room-create works!</p>
+<p-card>
+
+  <ng-template pTemplate="title" class="p-card-header">
+    Create Room
+  </ng-template>
+
+  <div id="form">
+
+    <form (ngSubmit)="onSubmit()"  >
+
+      <div class="p-fluid formgrid grid">
+        <div class="p-float-label field col">
+          <input id="name" type="text" required pInputText [(ngModel)]="room.name" name="name">
+          <label for="float-input">Name</label>
+        </div>
+        <div class="p-float-label field col">
+          <input id="date" type="text" required pInputText [(ngModel)]="room.date" name="date">
+          <label for="float-input">Date</label>
+        </div>
+
+        <div class="p-float-label field col">
+          <input id="startHour" type="text" required pInputText [(ngModel)]="room.startHour" name="startHour">
+          <label for="float-input">Start Hour</label>
+        </div>
+
+        <div class="p-float-label field col">
+          <input id="endHour" type="text" required pInputText [(ngModel)]="room.endHour" name="endHour">
+          <label for="float-input">End Hour</label>
+        </div>
+    </div>
+
+    <div class="grid">
+      <button pButton  type="submit" class="p-button-primary" style="margin-left: 10px">Submit</button>
+    </div>
+
+
+    </form>
+
+
+
+  </div>
+
+</p-card>
+
+
+<!-- <div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">name</label>
+      <input type="text" class="form-control" id="name" required name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">date</label>
+      <input type="text" class="form-control" id="date" required [(ngModel)]="room.date" name="date">
+    </div>
+
+    <div class="form-group">
+      <label for="name">startHour</label>
+      <input type="text" class="form-control" id="startHour" required [(ngModel)]="room.startHour" name="startHour">
+    </div>
+
+    <div class="form-group">
+        <label for="name">endHour</label>
+        <input type="text" class="form-control" id="endHour" required [(ngModel)]="room.endHour" name="endHour">
+      </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <button class="btn btn-success" (click)="newRoom()">Add</button> -->
+

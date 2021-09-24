@@ -1,0 +1,15 @@
+.content {
+  padding: 10px;
+}
+
+
+::ng-deep.p-menubar {
+  border: none!important;
+  background-color: #fcfeff;
+  border-radius: 0;
+
+}
+
+::ng-deep.p-ripple ::ng-deep.p-element ::ng-deep.p-menuitem-link ::ng-deep.ng-star-inserted {
+  color: #FFF;
+}

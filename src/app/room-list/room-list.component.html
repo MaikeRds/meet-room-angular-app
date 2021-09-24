@@ -1,1 +1,26 @@
-<p>room-list works!</p>
+<p-panel [toggleable]="true" header="Room List" >
+  <p-table [value]="rooms" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Start Hour</th>
+        <th>End Hour</th>
+        <th>Actions</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-room>
+      <tr>
+        <td>{{room.name}}</td>
+        <td>{{room.date}}</td>
+        <td>{{room.startHour}}</td>
+        <td>{{room.endHour}}</td>
+        <td [width]="300">
+          <button pButton (click)="deleteRoom(room.id)" class="p-button-danger">Delete</button>
+          <button pButton (click)="updateRoom(room.id)" class="p-button-info" style="margin-left: 10px">Update</button>
+          <button pButton (click)="detailRoom(room.id)" class="p-button-info" style="margin-left: 10px">Details</button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</p-panel>
