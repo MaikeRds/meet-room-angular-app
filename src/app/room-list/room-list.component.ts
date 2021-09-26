@@ -38,6 +38,7 @@ export class RoomListComponent implements OnInit {
   }
 
   detailRoom(id: number) {
+    console.log(id);
     this.router.navigate(['datails', id]);
   }
 
